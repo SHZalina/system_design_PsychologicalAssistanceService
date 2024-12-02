@@ -1,0 +1,32 @@
+ДИАГРАММА ПОСЛЕДОВАТЕЛЬНОСТИ: ЗАПИСЬ К ТЕКУЩЕМУ ПСИХОЛОГУ
+@startuml
+actor Клиент as client
+boundary Календарь as calendar
+boundary Запись as q1
+boundary Оплата as q3
+boundary Сессия as q2
+boundary Календарь as calendar2
+actor Психолог as psychologist
+
+activate client
+client -> calendar: ПросмотрКалендаря
+calendar -> q1: ЗаписьНаПриемСущСпец(Id psycho)
+
+activate q1
+q1 --> client: return Запись НоваяЗапись(Date ДатаСеанса, Id Клиент, Id Психолог, bool Оплачено = 0)
+client -> q3: ОплатаЗаписи(id Запись)
+activate q3
+q3 -> q3: Изменить состояние
+alt bool Состояние=1
+q3 --> q1: setОплачено(bool 1)
+q1 -> q2: Новая сессия
+q1 -> calendar: Добавление записи в календарьКлиента
+q1 -> calendar2: Добавление записи в календарьПсихолога
+calendar2 -> psychologist:Уведомление
+else bool Состояние=0
+q3 -> client: Запрос отклонен
+end
+deactivate q1
+deactivate q3
+deactivate client
+@enduml

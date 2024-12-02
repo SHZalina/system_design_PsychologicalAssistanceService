@@ -1,0 +1,31 @@
+@startuml
+node Server {
+label "server: WindowsPC"
+artifact "JAR:\nApplication.jar"
+cloud video {
+[VideoApi]
+}
+cloud bank{
+[bankApi]
+}
+}
+
+node Client {
+label "client: WindowsPC"
+artifact "JAR:\nClientView.jar"
+}
+
+node DBServer {
+collections adminDB
+collections userDB
+collections sessionDB
+collections calendarDB
+}
+
+Server -- DBServer: MySQL
+Server -- Client: TCP/IP
+adminDB .. sessionDB
+sessionDB .. userDB
+userDB .. calendarDB
+
+@enduml
