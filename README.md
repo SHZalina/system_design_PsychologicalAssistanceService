@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/5e2e0beb-f472-4f76-8990-65060ae00f37)
+
 В рамках изучения дисциплины «Объектно-ориентированный анализ и проектирование» были реализованы __UML-диаграммы__, описаны [предметная область](https://github.com/SHZalina/system_design_PsychologicalAssistanceService/blob/main/%D0%AD%D1%82%D0%B0%D0%BF1-%D0%9F%D0%BE%D0%BB%D1%8F%D0%BA%D0%BE%D0%B2%D0%B0%2C%20%D0%A8%D0%B0%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0_%D0%B8%D1%82%D0%BE%D0%B3.docx) и [прецеденты](https://github.com/SHZalina/system_design_PsychologicalAssistanceService/blob/main/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B5%D1%86%D0%B5%D0%B4%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9F%D0%BE%D0%BB%D1%8F%D0%BA%D0%BE%D0%B2%D0%B0%20%D0%A8%D0%B0%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0.docx) для проектирования веб-приложения «Сервис психологической помощи».
 
 * [Диаграмма классов](https://github.com/SHZalina/system_design_PsychologicalAssistanceService/blob/main/classDiagram_plantUML.txt)
